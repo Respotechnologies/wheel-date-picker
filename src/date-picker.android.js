@@ -48,7 +48,7 @@ export default class DatePicker extends PureComponent {
     mode: 'date',
     maximumDate: moment().add(10, 'years').toDate(),
     minimumDate: moment().add(-10, 'years').toDate(),
-    date: new Date(),
+      date: moment().add(-30, 'years').toDate(),
     style: null,
     textColor: 'black',
     textSize: 22,
