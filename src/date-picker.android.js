@@ -150,8 +150,9 @@ export default class DatePicker extends PureComponent {
   }
 
   render() {
+    const {backgroundColor} =this.props
     return (
-      <View style={[styles.row,{backgroundColor:'white'}]}>
+      <View style={[styles.row,{backgroundColor:backgroundColor?backgroundColor:'white'}]}>
         {['date', 'datetime'].includes(this.props.mode) && this.datePicker}
         {['time', 'datetime'].includes(this.props.mode) && this.timePicker}
       </View>
