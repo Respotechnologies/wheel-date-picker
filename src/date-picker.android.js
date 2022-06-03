@@ -51,7 +51,7 @@ export default class DatePicker extends PureComponent {
       date: moment().add(-30, 'years').toDate(),
     style: null,
     textColor: 'black',
-    textSize: 22,
+    textSize: 20,
     itemSpace: 20,
   };
 
@@ -150,8 +150,9 @@ export default class DatePicker extends PureComponent {
   }
 
   render() {
+    const {backgroundColor} =this.props
     return (
-      <View style={[styles.row,{backgroundColor:'white'}]}>
+      <View style={[styles.row,{backgroundColor:backgroundColor?backgroundColor:'white'}]}>
         {['date', 'datetime'].includes(this.props.mode) && this.datePicker}
         {['time', 'datetime'].includes(this.props.mode) && this.timePicker}
       </View>
@@ -185,7 +186,6 @@ export default class DatePicker extends PureComponent {
         case 'M': return (
           <View key='month' style={styles.picker}>
             <Picker
-            
               {...propsStyles}
               style={this.props.style}
               ref={(month) => { this.monthComponent = month; }}
