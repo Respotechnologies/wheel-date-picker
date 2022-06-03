@@ -29,7 +29,7 @@ export default class Picker extends Component {
 
   static defaultProps = {
     textColor: 'black',
-    textSize: 22,
+    textSize: 20,
     itemSpace: 20,
     itemStyle: null,
     style: null,
