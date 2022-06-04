@@ -187,6 +187,7 @@ export default class DatePicker extends PureComponent {
           <View key='month' style={styles.picker}>
             <Picker
               {...propsStyles}
+              itemSpace={15}
               style={this.props.style}
               ref={(month) => { this.monthComponent = month; }}
               selectedValue={this.state.date.getMonth() + 1}
