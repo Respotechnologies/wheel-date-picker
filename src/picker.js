@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ColorPropType, StyleSheet, View, ViewPropTypes as RNViewPropTypes, Text } from 'react-native';
 import PropTypes from 'prop-types';
 import WheelCurvedPicker from './WheelCurvedPicker';
+//test
 
 const ViewPropTypes = RNViewPropTypes || View.propTypes;
 
